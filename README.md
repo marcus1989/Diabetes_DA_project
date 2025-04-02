@@ -1,12 +1,26 @@
-# Project XYZ
+# Diabetes prediction dataset
 
-**Project XYZ** is a comprehensive data analysis tool designed to streamline data exploration, analysis, and visualisation. The tool supports multiple data formats and provides an intuitive interface for both novice and expert data scientists.
+Diabetes prediction dataset is a comprehensive data analysis tool designed to streamline data exploration, analysis, and visualisation. It is intended to support healthcare professionals, data analysts, and decision-makers in understanding trends, predicting risks, and improving patient outcomes. This document outlines key business user requirements for the dataset.
 
 # ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 
 ## Dataset Content
-* Describe your dataset. Choose a dataset of reasonable size to avoid exceeding the repository's maximum size of 100Gb.
+The dataset contains 10,000 records with 9 columns that capture demographic, clinical, and lifestyle factors related to diabetes. The data is cleaned and ready for analysis.
+* Age Range: 0.08 – 80 years (Mean: ~42)
+* Hypertension & Heart Disease:
+7.7% have hypertension
+3.7% have heart disease
+* BMI:
+Ranges from 10.64 to 87.7
+Mean: 27.34
+* HbA1c Level:
+Ranges from 3.5 to 9.0
+Mean: 5.55
+* Blood Glucose Level:
+Ranges from 80 to 300 mg/dL
+* Mean: 138.2 mg/dL
+Diabetes Prevalence: ~8.69% of individuals have diabetes
 
 
 ## Business Requirements
@@ -22,7 +36,8 @@
 * Why did you choose the research methodologies you used?
 
 ## The rationale to map the business requirements to the Data Visualisations
-* List your business requirements and a rationale to map them to the Data Visualisations
+* Diabetes prevalence by age and gender
+* Correlations between smoking history and diabetes
 
 ## Analysis techniques used
 * List the data analysis methods used and explain limitations or alternative approaches.
