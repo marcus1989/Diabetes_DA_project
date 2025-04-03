@@ -7,77 +7,99 @@ Diabetes prediction dataset is a comprehensive data analysis tool designed to st
 
 ## Dataset Content
 The dataset contains 10,000 records with 9 columns that capture demographic, clinical, and lifestyle factors related to diabetes. The data is cleaned and ready for analysis.
-* Age Range: 0.08 – 80 years (Mean: ~42)
-* Hypertension & Heart Disease:
-7.7% have hypertension
-3.7% have heart disease
+* Age Range: 0.08 – 80 years
+* Hypertension and Heart Disease
 * BMI:
-Ranges from 10.64 to 87.7
-Mean: 27.34
+        Ranges from 10.64 to 87.7
+        Mean: 27.34
 * HbA1c Level:
-Ranges from 3.5 to 9.0
-Mean: 5.55
+        Ranges from 3.5 to 9.0
+        Mean: 5.55
 * Blood Glucose Level:
-Ranges from 80 to 300 mg/dL
-* Mean: 138.2 mg/dL
+        Ranges from 80 to 300 mg/dL
+        Mean: 138.2 mg/dL
 Diabetes Prevalence: ~8.69% of individuals have diabetes
 
-
 ## Business Requirements
-* Describe your business requirements
+* Identify high-risk patients based on clinical and lifestyle factors.
+* Provide predictive insights for early diagnosis and intervention.
+* Enable healthcare providers to make data-driven treatment decisions.
+* Improve patient monitoring and risk assessment over time.
+* Support research and policy development in diabetes prevention.
 
 
 ## Hypothesis and how to validate?
-* List here your project hypothesis(es) and how you envision validating it (them) 
+1.	Higher BMI is associated with an increased risk of diabetes.
+        •	Patients with a BMI > 30 are more likely to be diabetic than those with a normal BMI.
+2.	Higher HbA1c levels are associated with diabetes progression.
+        •	Patients with HbA1c levels above 6.5% are more likely to develop complications.
+3.	Higher blood glucose levels are correlated with diabetes diagnosis.
+        •	Individuals with fasting glucose levels above 120 mg/dL have a higher probability of diabetes.
+ 
 
 ## Project Plan
-* Outline the high-level steps taken for the analysis.
-* How was the data managed throughout the collection, processing, analysis and interpretation steps?
+- Data collection was done using kaggle API. The dataset used was (https://www.kaggle.com/datasets/iammustafatz/diabetes-prediction-dataset)
+- For data cleaning step, I first selected 10000 rows from the original csv file.
+- The age column is changed from float to int and stored in a column called AGE.
+- Using the standard diviation method, drop outliers from the bmi(std div +- 4 iqr) and blood_glucose_level(std div +- 3 iqr) collumns.
+-  Used data cleaning effect and feature engineering using numerical, ordinal and outlier_winzorizer
 * Why did you choose the research methodologies you used?
+- the pearson correlation between each feature used like 'bmi', 'HbA1c' and 'Blood glucose level' with diabetes and plotting through different plots like scatter plots, bar plots, pie charts etc helped me to prove the hypthosis was right or wrong.
+
 
 ## The rationale to map the business requirements to the Data Visualisations
-* Diabetes prevalence by age and gender
-* Correlations between smoking history and diabetes
+* Diabetes prevalence by BMI, HbA1c and Blood glucose levels
+* Correlations between high BMI (BMI > 30) and diabetes
+* Correlations between high HbA1c (HbA1c ≥ 6.5) and diabetes
+* Correlations between high blood glucose level (blood glucose level > 120 mg/dL) and diabetes
 
 ## Analysis techniques used
 * List the data analysis methods used and explain limitations or alternative approaches.
+ - ETL pipeline
+    - extract the data from kaggle repository using the kaggle API
+    - data cleaning and transformation done through pandas and ML feature engineering.
+ - data visualization using Matplotlib, Seaborn and plotly
 * How did you structure the data analysis techniques. Justify your response.
 * Did the data limit you, and did you use an alternative approach to meet these challenges?
 * How did you use generative AI tools to help with ideation, design thinking and code optimisation?
+- I used chat GPT to check if my approach was correct. I also used chatGPT to optimize my code.
 
 ## Ethical considerations
 * Were there any data privacy, bias or fairness issues with the data?
 * How did you overcome any legal or societal issues?
 
 ## Unfixed Bugs
-* Please mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation are not valid reasons to leave bugs unfixed.
-* Did you recognise gaps in your knowledge, and how did you address them?
-* If applicable, include evidence of feedback received (from peers or instructors) and how it improved your approach or understanding.
+* I didnt have any bugs to fix
 
 ## Development Roadmap
 * What challenges did you face, and what strategies were used to overcome these challenges?
 * What new skills or tools do you plan to learn next based on your project experience? 
 
 ## Main Data Analysis Libraries
-* Here you should list the libraries you used in the project and provide an example(s) of how you used these libraries.
+* I have used python numpy and pandas library for data cleaning and ETL steps. 
+* For data visualization, I have used matplotlib, seaborn and plotly libraries.
+* For transformation and encoding, the scikit learn was used
 
 ## Credits 
 
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
+* code institute LMS material
+* stackoverflow  
+* chatGPT
+* google searches
 
 ### Content 
 
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
+- The etl and data visualization code where taken form the code institute LMS content. 
+- The data cleaning effect and feature engineering code was taken from the LMS material  - Feature Engine Topic 9:  Custom    Data Cleaning and Feature Engine Workflow
+- stackoverflow
+- used chaptGPT for some predictions
 
 ### Media
 
-- The photos used on the home and sign-up page are from This Open-Source site
-- The images used for the gallery page were taken from this other open-source site
-
+- The code institute logo from (https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+- github for version control - (https://github.com/marcus1989/Diabetes_DA_project)
 
 
 ## Acknowledgements (optional)
-* Thank the people who provided support through this project.
+* I wish to thank my facilitator Vasi, technical head Niel, our data coach John for the support during the project development.
+* I wish to thank my class coleagues Dani, Raihan, Saoni, Mohammad and Bruno for their support.
