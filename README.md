@@ -60,7 +60,9 @@ Diabetes Prevalence: ~8.69% of individuals have diabetes
     - data cleaning and transformation done through pandas and ML feature engineering.
  - data visualization using Matplotlib, Seaborn and plotly
 * How did you structure the data analysis techniques. Justify your response.
+- I had three cleaning steps. Each cleaned data is then stored to a .csv file, which is then used for the encoding/transformation step and also for the data visualization step.
 * Did the data limit you, and did you use an alternative approach to meet these challenges?
+- The data I used was already cleaned version.
 * How did you use generative AI tools to help with ideation, design thinking and code optimisation?
 - I used chat GPT to check if my approach was correct. I also used chatGPT to optimize my code.
 
@@ -73,7 +75,10 @@ Diabetes Prevalence: ~8.69% of individuals have diabetes
 
 ## Development Roadmap
 * What challenges did you face, and what strategies were used to overcome these challenges?
-* What new skills or tools do you plan to learn next based on your project experience? 
+-I had more outliers in the bmi and blood_glucose_level features which I removed most of it. I used the standard diviation method to identify the outliers and box plot to view the outliers. I then droped them from the columns.
+- I also also used feature engineering to view the differences between original dataset and the cleaned dataset from datacleanup2.
+* What new skills or tools do you plan to learn next based on your project experience?
+- I want to improve my data analytics skills, more time management and documentation. I also want to improve my understanding of ML- feature engineering, the ETL pipeline and more data visualization and explainations.
 
 ## Main Data Analysis Libraries
 * I have used python numpy and pandas library for data cleaning and ETL steps. 
